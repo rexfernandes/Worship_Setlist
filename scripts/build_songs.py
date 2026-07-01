@@ -89,7 +89,10 @@ def parse_meta_block(block_text):
 
 
 def parse_song_file(path):
-    raw = path.read_text(encoding='utf-8')
+    # utf-8-sig strips a leading BOM if present (common from phone note apps);
+    # normalizing line endings guards against lone '\r' (old Mac-style) breaks.
+    raw = path.read_text(encoding='utf-8-sig')
+    raw = raw.replace('\r\n', '\n').replace('\r', '\n')
     if '---' not in raw:
         raise ValueError(f"{path.name}: missing '---' separator between metadata and song body")
     meta_block, body = raw.split('---', 1)

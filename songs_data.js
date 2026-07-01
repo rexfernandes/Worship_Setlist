@@ -22682,6 +22682,372 @@ const SONGS_DATA = [
   ]
  },
  {
+  "title": "Yeshu Gharana",
+  "key": "G#m",
+  "capo": 0,
+  "language": "Hindi",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Intro]"
+   },
+   {
+    "type": "chord",
+    "text": "G#m  F# G#m F#/A# B  E B E B"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 1]"
+   },
+   {
+    "type": "chord",
+    "text": "G#m            D#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Na Koi Yahoodi Na Koi Yoonaani"
+   },
+   {
+    "type": "chord",
+    "text": "E                F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Na Koi Bhedbhaav Na Koi Rang Ya Riwaaj"
+   },
+   {
+    "type": "chord",
+    "text": "G#m           D#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Na Koi Gulaam Na Koi Swaami"
+   },
+   {
+    "type": "chord",
+    "text": "E                  F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Ya Ho Oonch-Neetch Ya Ho Nar Yaa Naari"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "E                     F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Hum Sab Masih Mein Ek Hain"
+   },
+   {
+    "type": "chord",
+    "text": "G#m         B       F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Lahoo Se Khareede Gaye"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "E     B           F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu Gharaane Ka Waaris Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "G#m        F#/A#      B"
+   },
+   {
+    "type": "lyric",
+    "text": "Waaris Hoon Main Uskaa Betaa Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "D#m         E     B           F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu Gharaane Ka Waaris Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "G#m        F#/A#"
+   },
+   {
+    "type": "lyric",
+    "text": "Waaris Hoon Main Uskaa Betaa Hoon"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Interlude]"
+   },
+   {
+    "type": "chord",
+    "text": "G#m  F# G#m F#/A# B  E B E B"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 2]"
+   },
+   {
+    "type": "chord",
+    "text": "G#m              D#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Naya Aagaaz Hai Naee Pehchaan Hai"
+   },
+   {
+    "type": "chord",
+    "text": "E                   B         F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Naya Dil Teri Rooh Se Bharaa Hai Mujhe"
+   },
+   {
+    "type": "chord",
+    "text": "G#m             D#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Naee Aawaaz Hai Naya Andaaz Hai"
+   },
+   {
+    "type": "lyric",
+    "text": "Page 1/2"
+   },
+   {
+    "type": "chord",
+    "text": "E                   B        F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Tere Naam Ke Libaaz Mein Odhhaa Mujhe"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "E                     F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Hum Sab Masih Mein Ek Hain"
+   },
+   {
+    "type": "chord",
+    "text": "G#m         B       F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Lahoo Se Khareede Gaye"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "E     B           F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu Gharaane Ka Waaris Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "G#m        F#/A#      B"
+   },
+   {
+    "type": "lyric",
+    "text": "Waaris Hoon Main Uskaa Betaa Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "D#m         E     B           F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu Gharaane Ka Waaris Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "G#m        F#/A#      B"
+   },
+   {
+    "type": "lyric",
+    "text": "Waaris Hoon Main Uskaa Betaa Hoon Main"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Interlude]"
+   },
+   {
+    "type": "chord",
+    "text": "G#m  F# G#m F#/A# B  E B E B"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge]"
+   },
+   {
+    "type": "chord",
+    "text": "B"
+   },
+   {
+    "type": "lyric",
+    "text": "Raajaao Ka Raajaa Tu"
+   },
+   {
+    "type": "chord",
+    "text": "B"
+   },
+   {
+    "type": "lyric",
+    "text": "Meraa Pitaa Bhi Hai Tu"
+   },
+   {
+    "type": "chord",
+    "text": "E         B      F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Ab Koi Shastr Na Roke Mujhe"
+   },
+   {
+    "type": "chord",
+    "text": "C#m      B      F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Shatru Ki Yukti Na Toke Mujhe"
+   },
+   {
+    "type": "chord",
+    "text": "B"
+   },
+   {
+    "type": "lyric",
+    "text": "Tu Hai Baadshaah Meraa"
+   },
+   {
+    "type": "chord",
+    "text": "B"
+   },
+   {
+    "type": "lyric",
+    "text": "Mahimaa Ki Tu Hi Hai Aasha"
+   },
+   {
+    "type": "chord",
+    "text": "E      B      F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Bolo Masih Yeshu Ki Jai"
+   },
+   {
+    "type": "chord",
+    "text": "C#m    B      F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Bolo Masih Yeshu Ki Jai"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "E     B           F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu Gharaane Ka Waaris Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "G#m        F#/A#      B"
+   },
+   {
+    "type": "lyric",
+    "text": "Waaris Hoon Main Uskaa Betaa Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "D#m         E     B           F#"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu Gharaane Ka Waaris Hoon Main"
+   },
+   {
+    "type": "chord",
+    "text": "G#m        F#/A#"
+   },
+   {
+    "type": "lyric",
+    "text": "Waaris Hoon Main Uskaa Betaa Hoon Main"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Interlude]"
+   },
+   {
+    "type": "chord",
+    "text": "G#m  F# G#m F#/A# B  E B E B"
+   }
+  ]
+ },
+ {
   "title": "You Alone",
   "key": "E",
   "capo": null,

@@ -62,6 +62,38 @@ function keyToIndex(key){
   return idx === -1 ? null : idx;
 }
 
+/* The relative major/minor of a key — they share the same key signature.
+   Relative minor sits 3 semitones below its major (G major -> E minor);
+   relative major sits 3 semitones above its minor (E minor -> G major). */
+function relativeKey(key){
+  const idx = keyToIndex(key);
+  if(idx === null) return null;
+  const minor = key.endsWith('m') && key !== 'm';
+  if(minor){
+    const majIdx = (idx + 3) % 12;
+    return SHARP_SCALE[majIdx];
+  } else {
+    const minIdx = ((idx - 3) % 12 + 12) % 12;
+    return SHARP_SCALE[minIdx] + 'm';
+  }
+}
+
+/* True if two keys are the same, or are a relative major/minor pair
+   (same key signature) — used so filtering by one surfaces both. */
+function keysAreRelative(a, b){
+  if(!a || !b) return false;
+  if(a === b) return true;
+  return relativeKey(a) === b || relativeKey(b) === a;
+}
+
+/* Canonical major-form of a key, used to group relative pairs under one
+   filter option (e.g. both "G" and "Em" group under "G"). */
+function majorFormOf(key){
+  if(!key || key === '?') return null;
+  const minor = key.endsWith('m') && key !== 'm';
+  return minor ? relativeKey(key) : key;
+}
+
 /* Semitone offset (shortest direction, -5..+6) to retune a song's base
    key to a different target key — used for the alternate-key pills. */
 function transposeAmountToKey(baseKey, targetKey){

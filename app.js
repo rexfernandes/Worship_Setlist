@@ -27,11 +27,12 @@ function songKeys(song){
 
 function refreshChrome(){
   songCount.textContent = `${SONGS_DATA.length} songs`;
-  const keys = [...new Set(SONGS_DATA.flatMap(songKeys))].filter(k => k && k !== '?').sort();
+  const allKeys = SONGS_DATA.flatMap(songKeys).filter(k => k && k !== '?');
+  const majorForms = [...new Set(allKeys.map(majorFormOf))].filter(Boolean).sort();
   const prevVal = keyFilter.value || 'all';
   keyFilter.innerHTML = '<option value="all">All keys</option>' +
-    keys.map(k => `<option value="${k}">Key: ${k}</option>`).join('');
-  keyFilter.value = keys.includes(prevVal) ? prevVal : 'all';
+    majorForms.map(mk => `<option value="${mk}">${mk} / ${relativeKey(mk)}</option>`).join('');
+  keyFilter.value = majorForms.includes(prevVal) ? prevVal : 'all';
 }
 
 /* ===== Filtering + sorting ===== */
@@ -45,7 +46,7 @@ function matchesQuery(song, q){
 function getVisibleSongs(){
   let list = SONGS_DATA.filter(s => {
     if(state.xmasOnly && !(s.tags || []).includes('Christmas')) return false;
-    if(state.keyFilter !== 'all' && !songKeys(s).includes(state.keyFilter)) return false;
+    if(state.keyFilter !== 'all' && !songKeys(s).some(k => keysAreRelative(k, state.keyFilter))) return false;
     if(!matchesQuery(s, state.query)) return false;
     return true;
   });

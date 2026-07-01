@@ -1,5 +1,6 @@
 Title: 
 Key: 
+Keys: 
 Capo: 
 Language: English
 Tags: 

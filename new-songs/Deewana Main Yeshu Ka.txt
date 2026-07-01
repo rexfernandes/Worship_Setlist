@@ -1,9 +1,9 @@
-﻿Title: Deewana Main Yeshu Ka
+﻿Title: Deewana Mein Yeshu Ka
 Key: B
 Capo: 0
 Language: Hindi
-Tags: Upbeat
---------------- 
+Tags: Praise
+---
  
 [Pre-Chorus]
      B              E

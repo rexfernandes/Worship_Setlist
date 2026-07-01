@@ -114,9 +114,20 @@ def parse_song_file(path):
         language = 'Other'
     tags = [t.strip() for t in meta.get('tags', '').split(',') if t.strip()]
 
+    # Optional: other keys this song is commonly sung in, e.g. "Keys: C, D, G".
+    # Always includes the primary key even if the contributor left it out.
+    keys_raw = meta.get('keys', '').strip()
+    if keys_raw:
+        keys = [k.strip() for k in keys_raw.split(',') if k.strip()]
+        if key not in keys:
+            keys.insert(0, key)
+    else:
+        keys = [key]
+
     return {
         'title': title,
         'key': key,
+        'keys': keys,
         'capo': capo,
         'language': language,
         'tags': tags,

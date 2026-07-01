@@ -53,6 +53,26 @@ function transposeKeyLabel(key, semitones){
   return SHARP_SCALE[newIdx] + (minor ? 'm' : '');
 }
 
+function keyToIndex(key){
+  if(!key || key === '?') return null;
+  const minor = key.endsWith('m') && key !== 'm';
+  const root = minor ? key.slice(0, -1) : key;
+  const norm = normalizeRoot(root);
+  const idx = SHARP_SCALE.indexOf(norm);
+  return idx === -1 ? null : idx;
+}
+
+/* Semitone offset (shortest direction, -5..+6) to retune a song's base
+   key to a different target key — used for the alternate-key pills. */
+function transposeAmountToKey(baseKey, targetKey){
+  const a = keyToIndex(baseKey);
+  const b = keyToIndex(targetKey);
+  if(a === null || b === null) return 0;
+  let diff = ((b - a) % 12 + 12) % 12;
+  if(diff > 6) diff -= 12;
+  return diff;
+}
+
 /* Parse a pasted "chord line above lyric line" block into a lines[] array,
    matching the same structure used by songs_data.js */
 function parseSongBody(rawText){

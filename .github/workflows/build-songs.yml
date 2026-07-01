@@ -1,0 +1,41 @@
+name: Build song library
+
+# Runs automatically whenever a file changes under new-songs/, and can also
+# be triggered manually from the Actions tab (Run workflow).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'new-songs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Parse and merge new songs
+        id: build
+        run: python3 scripts/build_songs.py
+
+      - name: Commit updated library
+        if: always()
+        run: |
+          git config user.name "song-library-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add songs_data.js new-songs/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Add/update songs from new-songs/"
+            git push
+          fi

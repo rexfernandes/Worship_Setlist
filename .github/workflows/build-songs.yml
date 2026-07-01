@@ -1,20 +1,31 @@
-name: Build song library
+name: Build song library and deploy
 
-# Runs automatically whenever a file changes under new-songs/, and can also
-# be triggered manually from the Actions tab (Run workflow).
+# Runs on every push to main. Parses any pending new-songs/*.txt files,
+# commits the result, then deploys the site — all in one run, so it
+# doesn't depend on a second workflow being auto-triggered (GitHub blocks
+# the bot's own commits from triggering further workflow runs, so a
+# separate "deploy on push" workflow would silently never fire after the
+# bot pushes).
 on:
   push:
     branches: [main]
-    paths:
-      - 'new-songs/**'
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -24,11 +35,12 @@ jobs:
           python-version: '3.x'
 
       - name: Parse and merge new songs
-        id: build
+        # continue-on-error so one broken song file (still visible with a
+        # warning in this step's log) never blocks the site from deploying
+        continue-on-error: true
         run: python3 scripts/build_songs.py
 
       - name: Commit updated library
-        if: always()
         run: |
           git config user.name "song-library-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -39,3 +51,15 @@ jobs:
             git commit -m "Add/update songs from new-songs/"
             git push
           fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

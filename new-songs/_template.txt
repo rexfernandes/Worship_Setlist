@@ -1,0 +1,14 @@
+Title: 
+Key: 
+Capo: 
+Language: English
+Tags: 
+---
+G                D
+(chord line goes directly above its lyric line, like this)
+Em                    C
+(leave a blank line between verses)
+
+CHORUS:
+G          D
+(section labels like CHORUS: / BRIDGE: / VERSE 2: go on their own line)

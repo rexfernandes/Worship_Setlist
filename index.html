@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Worship Song Library</title>
+<style>
+  :root{
+    --bg:#0f0b1a;
+    --bg-elev:#170f2b;
+    --card:#1e1640;
+    --card-hover:#2a1f57;
+    --text:#f6f2ff;
+    --text-dim:#a89bd1;
+    --violet:#8b5cf6;
+    --pink:#ff3d9a;
+    --lime:#c9ff3d;
+    --amber:#ffb627;
+    --rule:#332a5c;
+    --grad:linear-gradient(135deg,#8b5cf6 0%,#ff3d9a 65%,#ffb627 100%);
+    --radius:18px;
+    --radius-sm:12px;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{ font-family:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace; }
+  a{color:inherit;}
+  button{font-family:inherit;}
+
+  /* ===== Header ===== */
+  header.topbar{
+    position:sticky; top:0; z-index:20;
+    background:rgba(15,11,26,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+    padding:14px 16px 12px;
+  }
+  .brand{
+    display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px;
+  }
+  .brand-left{ display:flex; align-items:center; gap:10px; }
+  .brand .mark{
+    width:34px;height:34px;border-radius:10px; flex:none;
+    background:var(--grad);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.1rem;
+  }
+  .brand h1{
+    font-size:1.15rem; font-weight:800; letter-spacing:-.2px; margin:0;
+    color:var(--text);
+  }
+  .brand .count{
+    display:block; font-size:.7rem; color:var(--text-dim); font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em;
+  }
+
+  .controls{
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .row{ display:flex; gap:8px; }
+  input[type="search"]{
+    flex:1;
+    padding:12px 14px;
+    border:1px solid var(--rule);
+    border-radius:var(--radius-sm);
+    background:var(--card);
+    font-size:1rem;
+    color:var(--text);
+  }
+  input[type="search"]::placeholder{ color:var(--text-dim); }
+  input[type="search"]:focus, select:focus, button:focus-visible{
+    outline:2px solid var(--lime); outline-offset:1px;
+  }
+  select{
+    padding:11px 10px;
+    border:1px solid var(--rule);
+    border-radius:var(--radius-sm);
+    background:var(--card);
+    color:var(--text);
+    font-size:.88rem;
+    flex:1;
+  }
+  .lang-box{
+    display:flex; align-items:center; gap:8px;
+    padding:10px 14px; border:1px solid var(--rule); border-radius:var(--radius-sm);
+    background:var(--card); font-size:.78rem; color:var(--text-dim); font-weight:600;
+  }
+  .lang-box input[type="range"]{ flex:1; accent-color:var(--pink); }
+  .lang-box .lang-readout{ font-family:"SFMono-Regular",Menlo,monospace; min-width:0; flex:none; color:var(--lime); font-size:.72rem; }
+  .chip-toggle{
+    display:flex; align-items:center; gap:6px; flex:none;
+    padding:11px 14px; border:1px solid var(--rule); border-radius:var(--radius-sm);
+    background:var(--card); font-size:.82rem; cursor:pointer; user-select:none;
+    color:var(--text-dim); font-weight:600; white-space:nowrap;
+  }
+  .chip-toggle input{accent-color:var(--pink);}
+  .chip-toggle.active{ border-color:var(--pink); color:var(--pink); background:#341328; }
+
+  /* ===== Song list ===== */
+  main{ padding:14px 16px 40px; max-width:820px; margin:0 auto; }
+  .empty-state{
+    text-align:center; padding:60px 20px; color:var(--text-dim);
+  }
+  .song-list{ list-style:none; margin:10px 0 0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .song-row{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    background:var(--card); border:1px solid var(--rule); border-radius:var(--radius);
+    padding:15px 16px; cursor:pointer;
+    transition:border-color .12s ease, background .12s ease, transform .08s ease;
+  }
+  .song-row:hover{ border-color:var(--violet); background:var(--card-hover); }
+  .song-row:active{ transform:scale(.98); }
+  .song-row .title{
+    font-weight:700; font-size:1.02rem; color:var(--text);
+  }
+  .song-row .meta{ font-size:.76rem; color:var(--text-dim); margin-top:3px; font-weight:600; }
+  .badge{
+    font-family:"SFMono-Regular",Menlo,monospace;
+    font-size:.8rem; font-weight:800;
+    color:var(--bg); background:var(--lime);
+    border-radius:999px; padding:5px 12px; flex:none;
+  }
+  .tag-badge{
+    font-size:.66rem; font-weight:700; color:var(--bg); background:var(--amber);
+    border-radius:999px; padding:2px 9px; margin-left:7px; text-transform:uppercase; letter-spacing:.03em;
+  }
+
+  /* ===== Song viewer ===== */
+  #viewer{ display:none; padding-bottom:96px; }
+  .viewer-bar{
+    position:sticky; top:0; z-index:20;
+    background:rgba(15,11,26,.92); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+    padding:12px 16px; display:flex; align-items:center; gap:10px;
+  }
+  .btn{
+    border:1px solid var(--rule); background:var(--card); color:var(--text);
+    border-radius:999px; padding:10px 14px; font-size:.85rem; font-weight:700; cursor:pointer;
+  }
+  .btn:hover{ border-color:var(--violet); }
+  .btn.icon{ padding:10px 12px; font-size:1rem; line-height:1; text-decoration:none; display:inline-flex; }
+
+  .song-header{ padding:22px 20px 8px; max-width:760px; margin:0 auto; }
+  .song-header h2{
+    font-size:1.55rem; font-weight:800; letter-spacing:-.3px; margin:0 0 6px;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .song-header .sub{ color:var(--text-dim); font-size:.82rem; font-weight:600; }
+  .song-body{
+    max-width:760px; margin:0 auto; padding:10px 20px 20px;
+  }
+  .chord-line{
+    font-family:"SFMono-Regular",Menlo,Consolas,monospace;
+    color:var(--lime); font-weight:700; font-size:.95em;
+    white-space:pre; overflow-x:auto;
+    text-shadow:0 0 14px rgba(201,255,61,.25);
+  }
+  .lyric-line{
+    font-family:"SFMono-Regular",Menlo,Consolas,monospace;
+    color:var(--text); font-size:1.05em; white-space:pre-wrap;
+  }
+  .label-line{
+    margin:18px 0 4px;
+    text-transform:uppercase; letter-spacing:1.5px; font-size:.72rem;
+    color:var(--pink); font-weight:800; border-bottom:1px solid var(--rule);
+    padding-bottom:4px;
+  }
+  .blank-line{ height:16px; }
+
+  /* Bottom performance toolbar — thumb reach on phones */
+  .perf-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:30;
+    background:rgba(20,14,38,.96); backdrop-filter:blur(10px);
+    border-top:1px solid var(--rule);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    display:flex; align-items:center; justify-content:center; gap:10px;
+  }
+  .perf-bar .round{
+    width:44px;height:44px;border-radius:50%;
+    border:1px solid var(--rule); background:var(--card); color:var(--text);
+    font-size:1.2rem; font-weight:800; cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .perf-bar .round:active{ background:var(--card-hover); }
+  .perf-bar .key-pill{
+    font-family:"SFMono-Regular",Menlo,monospace; font-weight:800; font-size:1.05rem;
+    color:var(--bg); background:var(--lime); border-radius:999px; padding:10px 18px; min-width:64px; text-align:center;
+  }
+  .perf-bar .reset-link{
+    font-size:.72rem; color:var(--text-dim); background:none; border:none; cursor:pointer; padding:6px;
+  }
+  .focus-toggle{
+    width:44px;height:44px;border-radius:50%; flex:none;
+    border:1px solid var(--rule); background:var(--card); color:var(--text);
+    font-size:1.1rem; cursor:pointer;
+  }
+
+  /* Focus mode: bigger everything, dim chrome */
+  body.focus .chord-line{ font-size:1.25em; }
+  body.focus .lyric-line{ font-size:1.5em; }
+  body.focus .viewer-bar{ opacity:.55; }
+  body.focus .viewer-bar:hover, body.focus .viewer-bar:focus-within{ opacity:1; }
+
+  footer.hint{
+    text-align:center; color:var(--text-dim); font-size:.72rem; padding:16px; font-weight:600;
+  }
+
+  /* ===== Desktop / wider screens ===== */
+  @media (min-width:640px){
+    .row{ align-items:center; }
+    .controls{ flex-direction:row; flex-wrap:wrap; }
+    .row.search-row{ flex:1 1 260px; }
+    select{ flex:none; min-width:130px; }
+    .brand h1{ font-size:1.35rem; }
+    .song-header h2{ font-size:1.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="listView">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-left">
+        <div class="mark">🎤</div>
+        <div>
+          <h1>Worship Songs</h1>
+          <span class="count" id="songCount"></span>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="row search-row">
+        <input type="search" id="searchBox" placeholder="Search by title or lyric…" autocomplete="off">
+      </div>
+      <div class="row">
+        <select id="keyFilter"></select>
+        <label class="chip-toggle" id="xmasToggleWrap">
+          <input type="checkbox" id="xmasToggle"> 🎄 Christmas
+        </label>
+      </div>
+      <div class="lang-box" title="Sorts the list to surface English or Hindi/Other songs first.">
+        <span>HI</span>
+        <input type="range" id="langSlider" min="0" max="100" value="50">
+        <span>EN</span>
+        <span class="lang-readout" id="langReadout">Mixed</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <ul class="song-list" id="songList"></ul>
+    <div class="empty-state" id="emptyState" style="display:none;">No songs match your search.</div>
+  </main>
+  <footer class="hint">Tap a song for chords &amp; lyrics · works fully offline</footer>
+</div>
+
+<div id="viewer">
+  <div class="viewer-bar">
+    <button class="btn icon" id="backBtn">←</button>
+    <div style="flex:1;"></div>
+  </div>
+  <div class="song-header">
+    <h2 id="songTitle"></h2>
+    <div class="sub" id="songSub"></div>
+  </div>
+  <div class="song-body" id="songBody"></div>
+
+  <div class="perf-bar">
+    <button class="focus-toggle" id="focusBtn" title="Focus mode: bigger text">🔍</button>
+    <button class="round" id="transDown">−</button>
+    <span class="key-pill" id="keyReadout">G</span>
+    <button class="round" id="transUp">+</button>
+    <button class="reset-link" id="transReset">reset</button>
+  </div>
+</div>
+
+<script src="songs_data.js"></script>
+<script src="chords.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

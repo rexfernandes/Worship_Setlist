@@ -2,7 +2,7 @@
 const state = {
   query: '',
   keyFilter: 'all',
-  xmasOnly: false,
+  tagFilter: 'all',
   langBias: 50, // 0 = Hindi/Other first, 100 = English first, 50 = alphabetical
   transpose: 0,
   currentSong: null,
@@ -15,8 +15,7 @@ const songListEl = document.getElementById('songList');
 const emptyState = document.getElementById('emptyState');
 const searchBox = document.getElementById('searchBox');
 const keyFilter = document.getElementById('keyFilter');
-const xmasToggle = document.getElementById('xmasToggle');
-const xmasToggleWrap = document.getElementById('xmasToggleWrap');
+const tagFilter = document.getElementById('tagFilter');
 const langSlider = document.getElementById('langSlider');
 const langReadout = document.getElementById('langReadout');
 const songCount = document.getElementById('songCount');
@@ -29,10 +28,16 @@ function refreshChrome(){
   songCount.textContent = `${SONGS_DATA.length} songs`;
   const allKeys = SONGS_DATA.flatMap(songKeys).filter(k => k && k !== '?');
   const majorForms = [...new Set(allKeys.map(majorFormOf))].filter(Boolean).sort();
-  const prevVal = keyFilter.value || 'all';
+  const prevKeyVal = keyFilter.value || 'all';
   keyFilter.innerHTML = '<option value="all">All keys</option>' +
     majorForms.map(mk => `<option value="${mk}">${mk} / ${relativeKey(mk)}</option>`).join('');
-  keyFilter.value = majorForms.includes(prevVal) ? prevVal : 'all';
+  keyFilter.value = majorForms.includes(prevKeyVal) ? prevKeyVal : 'all';
+
+  const allTags = [...new Set(SONGS_DATA.flatMap(s => s.tags || []))].filter(Boolean).sort();
+  const prevTagVal = tagFilter.value || 'all';
+  tagFilter.innerHTML = '<option value="all">All tags</option>' +
+    allTags.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+  tagFilter.value = allTags.includes(prevTagVal) ? prevTagVal : 'all';
 }
 
 /* ===== Filtering + sorting ===== */
@@ -45,7 +50,7 @@ function matchesQuery(song, q){
 
 function getVisibleSongs(){
   let list = SONGS_DATA.filter(s => {
-    if(state.xmasOnly && !(s.tags || []).includes('Christmas')) return false;
+    if(state.tagFilter !== 'all' && !(s.tags || []).includes(state.tagFilter)) return false;
     if(state.keyFilter !== 'all' && !songKeys(s).some(k => keysAreRelative(k, state.keyFilter))) return false;
     if(!matchesQuery(s, state.query)) return false;
     return true;
@@ -170,11 +175,7 @@ function renderSong(){
 /* ===== Event wiring ===== */
 searchBox.addEventListener('input', () => { state.query = searchBox.value; renderList(); });
 keyFilter.addEventListener('change', () => { state.keyFilter = keyFilter.value; renderList(); });
-xmasToggle.addEventListener('change', () => {
-  state.xmasOnly = xmasToggle.checked;
-  xmasToggleWrap.classList.toggle('active', state.xmasOnly);
-  renderList();
-});
+tagFilter.addEventListener('change', () => { state.tagFilter = tagFilter.value; renderList(); });
 langSlider.addEventListener('input', () => {
   state.langBias = Number(langSlider.value);
   if(state.langBias === 50) langReadout.textContent = 'Mixed';

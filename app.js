@@ -21,9 +21,13 @@ const langSlider = document.getElementById('langSlider');
 const langReadout = document.getElementById('langReadout');
 const songCount = document.getElementById('songCount');
 
+function songKeys(song){
+  return (song.keys && song.keys.length) ? song.keys : [song.key];
+}
+
 function refreshChrome(){
   songCount.textContent = `${SONGS_DATA.length} songs`;
-  const keys = [...new Set(SONGS_DATA.map(s => s.key))].filter(k => k && k !== '?').sort();
+  const keys = [...new Set(SONGS_DATA.flatMap(songKeys))].filter(k => k && k !== '?').sort();
   const prevVal = keyFilter.value || 'all';
   keyFilter.innerHTML = '<option value="all">All keys</option>' +
     keys.map(k => `<option value="${k}">Key: ${k}</option>`).join('');
@@ -41,7 +45,7 @@ function matchesQuery(song, q){
 function getVisibleSongs(){
   let list = SONGS_DATA.filter(s => {
     if(state.xmasOnly && !(s.tags || []).includes('Christmas')) return false;
-    if(state.keyFilter !== 'all' && s.key !== state.keyFilter) return false;
+    if(state.keyFilter !== 'all' && !songKeys(s).includes(state.keyFilter)) return false;
     if(!matchesQuery(s, state.query)) return false;
     return true;
   });
@@ -73,12 +77,13 @@ function renderList(){
     li.className = 'song-row';
     li.tabIndex = 0;
     const tagsHtml = (song.tags || []).map(t => `<span class="tag-badge">${escapeHtml(t)}</span>`).join('');
+    const extraKeys = songKeys(song).length - 1;
     li.innerHTML = `
       <div>
         <div class="title">${escapeHtml(song.title)}${tagsHtml}</div>
         <div class="meta">${escapeHtml(song.language || 'English')}${song.capo ? ' · Capo ' + song.capo : ''}</div>
       </div>
-      <span class="badge">${escapeHtml(song.key || '?')}</span>
+      <span class="badge">${escapeHtml(song.key || '?')}${extraKeys > 0 ? ` <span class="badge-extra">+${extraKeys}</span>` : ''}</span>
     `;
     li.addEventListener('click', () => openSong(song));
     li.addEventListener('keypress', e => { if(e.key === 'Enter') openSong(song); });
@@ -119,6 +124,25 @@ function renderSong(){
   if((song.tags || []).length) subParts.push(song.tags.join(', '));
   document.getElementById('songSub').textContent = subParts.join(' · ');
   document.getElementById('keyReadout').textContent = transposeKeyLabel(song.key, state.transpose);
+
+  const altKeysEl = document.getElementById('altKeys');
+  const keys = songKeys(song);
+  const currentKey = transposeKeyLabel(song.key, state.transpose);
+  if(keys.length > 1){
+    altKeysEl.style.display = 'flex';
+    altKeysEl.innerHTML = keys.map(k =>
+      `<button class="key-pill-btn${k === currentKey ? ' active' : ''}" data-key="${escapeHtml(k)}">${escapeHtml(k)}</button>`
+    ).join('');
+    altKeysEl.querySelectorAll('.key-pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.transpose = transposeAmountToKey(song.key, btn.dataset.key);
+        renderSong();
+      });
+    });
+  } else {
+    altKeysEl.style.display = 'none';
+    altKeysEl.innerHTML = '';
+  }
 
   const body = document.getElementById('songBody');
   body.innerHTML = '';

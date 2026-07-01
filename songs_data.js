@@ -22684,6 +22684,10 @@ const SONGS_DATA = [
  {
   "title": "Yeshu Gharana",
   "key": "G#m",
+  "keys": [
+   "G#m",
+   "B"
+  ],
   "capo": 0,
   "language": "Hindi",
   "tags": [],

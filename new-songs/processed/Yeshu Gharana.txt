@@ -1,5 +1,6 @@
-﻿Title: Yeshu Gharana
+Title: Yeshu Gharana
 Key:  G#m
+Keys: B
 Capo: 0
 Language: Hindi
 Tags: 

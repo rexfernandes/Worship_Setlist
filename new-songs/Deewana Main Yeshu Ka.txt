@@ -1,4 +1,4 @@
-﻿Title: Deewana Mein Yeshu Ka
+﻿Title:Deewana Mein Yeshu Ka
 Key: B
 Capo: 0
 Language: Hindi

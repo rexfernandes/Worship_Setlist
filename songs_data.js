@@ -6529,6 +6529,366 @@ const SONGS_DATA = [
   ]
  },
  {
+  "title": "For the lord is marching - bonnie low",
+  "key": "Bm",
+  "keys": [
+   "Bm"
+  ],
+  "capo": 2,
+  "language": "English",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Verse 1]"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "For the Lord is marching on"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "And His army is ever strong"
+   },
+   {
+    "type": "chord",
+    "text": "F               G            Am"
+   },
+   {
+    "type": "lyric",
+    "text": "and His glory shall be seen upon our land"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 2]"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Raise the anthem sing the victor's song"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Praise the Lord for the battle's won"
+   },
+   {
+    "type": "chord",
+    "text": "F              G                Am"
+   },
+   {
+    "type": "lyric",
+    "text": "No weapon formed against us shall stand"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "F                       C"
+   },
+   {
+    "type": "lyric",
+    "text": "For the captain of the host is Jesus"
+   },
+   {
+    "type": "chord",
+    "text": "F                C"
+   },
+   {
+    "type": "lyric",
+    "text": "We're following in His footsteps"
+   },
+   {
+    "type": "chord",
+    "text": "F              G               Am"
+   },
+   {
+    "type": "lyric",
+    "text": "No foe can stand against us in the fray"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 3]"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "We are marching in Messiah's band"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "The keys of vict'ry in His mighty hand"
+   },
+   {
+    "type": "chord",
+    "text": "F           G                 Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Let us march on to take our promised land"
+   }
+  ]
+ },
+ {
+  "title": "For Your Name Is Holy - Paul Wilbur",
+  "key": "F#m",
+  "keys": [
+   "F#m"
+  ],
+  "capo": 2,
+  "language": "English",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Verse]"
+   },
+   {
+    "type": "chord",
+    "text": "Em                 D"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter the Holy of Holies"
+   },
+   {
+    "type": "chord",
+    "text": "Am                 D           Em"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter through the blood of the Lamb"
+   },
+   {
+    "type": "chord",
+    "text": "Em                   D"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter to worship You only"
+   },
+   {
+    "type": "chord",
+    "text": "Am      D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter to honor I Am"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "G      D       Am      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Lord I worship You, I worship You,"
+   },
+   {
+    "type": "chord",
+    "text": "G      D       Am      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Lord I worship You, I worship You,"
+   },
+   {
+    "type": "chord",
+    "text": "D        C     D    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "For Your name is Holy, Holy Lord"
+   },
+   {
+    "type": "chord",
+    "text": "D       C      D    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "For Your name is Holy, Holy Lord"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse]"
+   },
+   {
+    "type": "chord",
+    "text": "Em                 D"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter the Holy of Holies"
+   },
+   {
+    "type": "chord",
+    "text": "Am                 D           Em"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter through the blood of the Lamb"
+   },
+   {
+    "type": "chord",
+    "text": "Em                   D"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter to worship You only"
+   },
+   {
+    "type": "chord",
+    "text": "Am      D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "I enter to honor I Am"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "G      D       Am      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Lord I worship You, I worship You,"
+   },
+   {
+    "type": "chord",
+    "text": "G      D       Am      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Lord I worship You, I worship You,"
+   },
+   {
+    "type": "chord",
+    "text": "D        C     D    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "For Your name is Holy, Holy Lord"
+   },
+   {
+    "type": "chord",
+    "text": "D       C      D    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "For Your name is Holy, Holy Lord"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Outro]"
+   },
+   {
+    "type": "chord",
+    "text": "C              D      Emadd9"
+   },
+   {
+    "type": "lyric",
+    "text": "Let the weight of your glory cover us"
+   },
+   {
+    "type": "chord",
+    "text": "C            D     Emadd9"
+   },
+   {
+    "type": "lyric",
+    "text": "Let the life of your river flow"
+   },
+   {
+    "type": "chord",
+    "text": "C             D          Emadd9"
+   },
+   {
+    "type": "lyric",
+    "text": "Let the truth of your kingdom reign in us"
+   },
+   {
+    "type": "chord",
+    "text": "C              D"
+   },
+   {
+    "type": "lyric",
+    "text": "Let the weight of your glory"
+   },
+   {
+    "type": "chord",
+    "text": "C             D      Emadd9"
+   },
+   {
+    "type": "lyric",
+    "text": "Let the weight of your glory, fall"
+   },
+   {
+    "type": "chord",
+    "text": "C             D       Emadd9"
+   },
+   {
+    "type": "lyric",
+    "text": "Let the weight of your glory, fall"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "C    D    E"
+   }
+  ]
+ },
+ {
   "title": "Forever",
   "key": "G",
   "capo": null,
@@ -8810,6 +9170,212 @@ const SONGS_DATA = [
    {
     "type": "label",
     "text": "to see my sin upon that cross"
+   }
+  ]
+ },
+ {
+  "title": "Ho teri stuti aur aradhana",
+  "key": "Am",
+  "keys": [
+   "Am"
+  ],
+  "capo": 0,
+  "language": "Hindi",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Intro]"
+   },
+   {
+    "type": "chord",
+    "text": "Am F G E"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse]"
+   },
+   {
+    "type": "chord",
+    "text": "Am                F"
+   },
+   {
+    "type": "lyric",
+    "text": "Ho Teri Stuti Aur Aradhana"
+   },
+   {
+    "type": "chord",
+    "text": "G                   E"
+   },
+   {
+    "type": "lyric",
+    "text": "Kartahun Mein Tujse Yeh Prathana"
+   },
+   {
+    "type": "chord",
+    "text": "Am               F"
+   },
+   {
+    "type": "lyric",
+    "text": "Mahimase Teri Tu Is Jagako Bhar"
+   },
+   {
+    "type": "chord",
+    "text": "G               E"
+   },
+   {
+    "type": "lyric",
+    "text": "Jo Bhi Tu Chahe Tu Yahan Par Kar"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "Am          F          G          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Hale Hallelujah Hallelujah Hallelujah"
+   },
+   {
+    "type": "chord",
+    "text": "Am          F          G          E"
+   },
+   {
+    "type": "lyric",
+    "text": "Hale Hallelujah Hallelujah Hallelujah"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 2]"
+   },
+   {
+    "type": "chord",
+    "text": "Am                 F"
+   },
+   {
+    "type": "lyric",
+    "text": "Karunase Teri Naya Din Dikhata Hai"
+   },
+   {
+    "type": "chord",
+    "text": "G                E"
+   },
+   {
+    "type": "lyric",
+    "text": "Dhal Banker Meri Mujhe Bachata Hai"
+   },
+   {
+    "type": "chord",
+    "text": "Am                 F"
+   },
+   {
+    "type": "lyric",
+    "text": "Jab Mein Pukaru Tu Daude Aata Hai"
+   },
+   {
+    "type": "chord",
+    "text": "G             E"
+   },
+   {
+    "type": "lyric",
+    "text": "Jab Mein Giru Mujhe Uthata Hai"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "Am          F          G          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Hale Hallelujah Hallelujah Hallelujah"
+   },
+   {
+    "type": "chord",
+    "text": "Am          F          G          E"
+   },
+   {
+    "type": "lyric",
+    "text": "Hale Hallelujah Hallelujah Hallelujah"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 3]"
+   },
+   {
+    "type": "chord",
+    "text": "Am              F"
+   },
+   {
+    "type": "lyric",
+    "text": "Sare Jahan Mein Tujhsa Koi Nahi"
+   },
+   {
+    "type": "chord",
+    "text": "G               E"
+   },
+   {
+    "type": "lyric",
+    "text": "Tujko Chod Koyi Prabhu Hai Hi Nahi"
+   },
+   {
+    "type": "chord",
+    "text": "Am               F"
+   },
+   {
+    "type": "lyric",
+    "text": "Ghutne Mein Teku Bas Tere Saamne"
+   },
+   {
+    "type": "chord",
+    "text": "G                  E"
+   },
+   {
+    "type": "lyric",
+    "text": "Tu Hai Mera Prabhu Tu Mera Pita"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "Am          F          G          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Hale Hallelujah Hallelujah Hallelujah"
+   },
+   {
+    "type": "chord",
+    "text": "Am          F          G          E"
+   },
+   {
+    "type": "lyric",
+    "text": "Hale Hallelujah Hallelujah Hallelujah"
    }
   ]
  },
@@ -12492,6 +13058,247 @@ const SONGS_DATA = [
    {
     "type": "lyric",
     "text": "Bless the Lord, bless the Lord, O my soul!"
+   }
+  ]
+ },
+ {
+  "title": "Itni si khwaish - Joseph Raj Allam",
+  "key": "E",
+  "keys": [
+   "E"
+  ],
+  "capo": 0,
+  "language": "Hindi",
+  "tags": [],
+  "lines": [
+   {
+    "type": "chord",
+    "text": "E                            B"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere jeevan se mahima tumko mile"
+   },
+   {
+    "type": "chord",
+    "text": "A          B            E"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere shabdon se aadar tumko mile ..x2"
+   },
+   {
+    "type": "chord",
+    "text": "C#m   G#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Itni si khwah]ish,"
+   },
+   {
+    "type": "lyric",
+    "text": "B.    A        E"
+   },
+   {
+    "type": "lyric",
+    "text": "mujhmein main nahin, Tu dikhe… x2"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "E"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere uthne aur baithne"
+   },
+   {
+    "type": "chord",
+    "text": "C#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere aane aur jaane"
+   },
+   {
+    "type": "chord",
+    "text": "B"
+   },
+   {
+    "type": "lyric",
+    "text": "Meri seva mere bacchon"
+   },
+   {
+    "type": "chord",
+    "text": "G#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Aur mere gharane"
+   },
+   {
+    "type": "chord",
+    "text": "F#m             A"
+   },
+   {
+    "type": "lyric",
+    "text": "Meri saari baaton me Yeshu"
+   },
+   {
+    "type": "chord",
+    "text": "B"
+   },
+   {
+    "type": "lyric",
+    "text": "Tu dikhe ..x4"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "C#m   G#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Itni si khwah]ish,"
+   },
+   {
+    "type": "lyric",
+    "text": "B.    A        E"
+   },
+   {
+    "type": "lyric",
+    "text": "mujhmein main nahin, Tu dikhe… x2"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "E"
+   },
+   {
+    "type": "lyric",
+    "text": "Dukhon ke samay mein,"
+   },
+   {
+    "type": "chord",
+    "text": "A"
+   },
+   {
+    "type": "lyric",
+    "text": "main shaant rahun,"
+   },
+   {
+    "type": "chord",
+    "text": "F#m7     A  B      E"
+   },
+   {
+    "type": "lyric",
+    "text": "Aur jaanun ki Tu hi hai Khuda"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "E"
+   },
+   {
+    "type": "lyric",
+    "text": "Gham ke samay mein,"
+   },
+   {
+    "type": "chord",
+    "text": "A"
+   },
+   {
+    "type": "lyric",
+    "text": "main shaant rahun,"
+   },
+   {
+    "type": "chord",
+    "text": "F#m7     A  B      E"
+   },
+   {
+    "type": "lyric",
+    "text": "Aur jaanun ki Tu hi hai Khuda ..x2"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "E          C#m7"
+   },
+   {
+    "type": "lyric",
+    "text": "Mera rahbar bhi Tu,"
+   },
+   {
+    "type": "chord",
+    "text": "E                 C#m7"
+   },
+   {
+    "type": "lyric",
+    "text": "Mera chhudane wala bhi Tu."
+   },
+   {
+    "type": "chord",
+    "text": "A"
+   },
+   {
+    "type": "lyric",
+    "text": "Mera sahaara hai Tu,"
+   },
+   {
+    "type": "chord",
+    "text": "E"
+   },
+   {
+    "type": "lyric",
+    "text": "Mera humdam bhi Tu."
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "C#m   G#m"
+   },
+   {
+    "type": "lyric",
+    "text": "Itni si khwah]ish,"
+   },
+   {
+    "type": "lyric",
+    "text": "B.    A        E"
+   },
+   {
+    "type": "lyric",
+    "text": "mujhmein main nahin, Tu dikhe… x2"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "E                            B"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere jeevan se mahima tumko mile"
+   },
+   {
+    "type": "chord",
+    "text": "A          B            E"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere shabdon se aadar tumko mile ..x2"
    }
   ]
  },
@@ -17246,6 +18053,247 @@ const SONGS_DATA = [
    {
     "type": "lyric",
     "text": "(Repeat)"
+   }
+  ]
+ },
+ {
+  "title": "Our god is an awesome god",
+  "key": "Em",
+  "keys": [
+   "Em"
+  ],
+  "capo": 0,
+  "language": "English",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Verse 1]"
+   },
+   {
+    "type": "chord",
+    "text": "Em"
+   },
+   {
+    "type": "lyric",
+    "text": "When He rolls up His sleeves He ain't just puttin' on the ritz"
+   },
+   {
+    "type": "chord",
+    "text": "Am         D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "There is thunder in His footsteps and lightning in His fists"
+   },
+   {
+    "type": "chord",
+    "text": "Am         D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-chorus 1]"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "The Lord wasn't joking when He kicked 'em out of Eden"
+   },
+   {
+    "type": "chord",
+    "text": "D                            Em"
+   },
+   {
+    "type": "lyric",
+    "text": "It wasn't for no reason that He shed His blood"
+   },
+   {
+    "type": "chord",
+    "text": "C                        Am"
+   },
+   {
+    "type": "lyric",
+    "text": "His return is very soon so you better be believin'"
+   },
+   {
+    "type": "chord",
+    "text": "D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "That our God is an awesome God"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "Em   C          G     Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God"
+   },
+   {
+    "type": "chord",
+    "text": "D  (B)    Em  (D)  Em"
+   },
+   {
+    "type": "lyric",
+    "text": "He reigns from heaven above"
+   },
+   {
+    "type": "chord",
+    "text": "C       G        Em"
+   },
+   {
+    "type": "lyric",
+    "text": "With wisdom, power and love"
+   },
+   {
+    "type": "chord",
+    "text": "Am      (C)  D    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God!"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 2]"
+   },
+   {
+    "type": "chord",
+    "text": "Em"
+   },
+   {
+    "type": "lyric",
+    "text": "And when the sky was starless in the void of the night"
+   },
+   {
+    "type": "chord",
+    "text": "Am         D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "He spoke into the darkness and created the light"
+   },
+   {
+    "type": "chord",
+    "text": "Am         D      Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-chorus 2]"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "Judgment and wrath He poured out on Sodom"
+   },
+   {
+    "type": "chord",
+    "text": "D                  Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Mercy and grace He gave us at the cross"
+   },
+   {
+    "type": "chord",
+    "text": "C                    Am"
+   },
+   {
+    "type": "lyric",
+    "text": "I hope that we have not too quickly forgotten"
+   },
+   {
+    "type": "chord",
+    "text": "D     Em"
+   },
+   {
+    "type": "lyric",
+    "text": "That our God is an awesome God!"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "Em   C          G     Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God"
+   },
+   {
+    "type": "chord",
+    "text": "D  (B)    Em  (D)  Em"
+   },
+   {
+    "type": "lyric",
+    "text": "He reigns from heaven above"
+   },
+   {
+    "type": "chord",
+    "text": "C       G        Em"
+   },
+   {
+    "type": "lyric",
+    "text": "With wisdom, power and love"
+   },
+   {
+    "type": "chord",
+    "text": "Am      (C)  D    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Our God is an awesome God!"
    }
   ]
  },
@@ -23008,6 +24056,211 @@ const SONGS_DATA = [
   ]
  },
  {
+  "title": "Yahweh will manifest himself",
+  "key": "Em",
+  "keys": [
+   "Em"
+  ],
+  "capo": 0,
+  "language": "English",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Intro]"
+   },
+   {
+    "type": "lyric",
+    "text": "| C   | D   | Bm  | Em  | C   | D   | Em  | Em"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "C      D      Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Yahweh, Rafa, Elohim"
+   },
+   {
+    "type": "chord",
+    "text": "Em      C       D"
+   },
+   {
+    "type": "lyric",
+    "text": "Shaddai, Jireh, Adonai"
+   },
+   {
+    "type": "chord",
+    "text": "Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Will Manifest Himself  (x2)"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 1]"
+   },
+   {
+    "type": "chord",
+    "text": "Em                        D"
+   },
+   {
+    "type": "lyric",
+    "text": "Your glory is tangible in this place"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "Lord, your doing something great"
+   },
+   {
+    "type": "chord",
+    "text": "D"
+   },
+   {
+    "type": "lyric",
+    "text": "Awaken supernatural faith   (x2)"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Instrumental]"
+   },
+   {
+    "type": "lyric",
+    "text": "| Em  | D   | C   | C D |"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge 1]"
+   },
+   {
+    "type": "chord",
+    "text": "Em                                   D"
+   },
+   {
+    "type": "lyric",
+    "text": "If you worship He will manifest Himself"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "If you call Him He will manifest Himself"
+   },
+   {
+    "type": "chord",
+    "text": "C      D"
+   },
+   {
+    "type": "lyric",
+    "text": "If you seek Him He will manifest Himself   (x3)"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge 2]"
+   },
+   {
+    "type": "chord",
+    "text": "Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Yahweh will manifest Himself"
+   },
+   {
+    "type": "chord",
+    "text": "D"
+   },
+   {
+    "type": "lyric",
+    "text": "Jireh will manifest Himself"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "Rapha will manifest Himself"
+   },
+   {
+    "type": "chord",
+    "text": "C      D"
+   },
+   {
+    "type": "lyric",
+    "text": "Will manifest Himself   (x3)"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Instrumental]"
+   },
+   {
+    "type": "lyric",
+    "text": "| Em  | D   | C   | C D |"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "C      D      Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Yahweh, Rafa, Elohim"
+   },
+   {
+    "type": "chord",
+    "text": "Em      C       D"
+   },
+   {
+    "type": "lyric",
+    "text": "Shaddai, Jireh, Adonai"
+   },
+   {
+    "type": "chord",
+    "text": "Em"
+   },
+   {
+    "type": "lyric",
+    "text": "Will Manifest Himself (x4)"
+   }
+  ]
+ },
+ {
   "title": "Yeshu Gharana",
   "key": "G#m",
   "keys": [
@@ -23374,6 +24627,354 @@ const SONGS_DATA = [
    {
     "type": "chord",
     "text": "G#m  F# G#m F#/A# B  E B E B"
+   }
+  ]
+ },
+ {
+  "title": "Yeshua my beloved",
+  "key": "D#m",
+  "keys": [
+   "D#m"
+  ],
+  "capo": 1,
+  "language": "English",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Intro]"
+   },
+   {
+    "type": "chord",
+    "text": "A# F C Dm"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse]"
+   },
+   {
+    "type": "chord",
+    "text": "Dm               A#"
+   },
+   {
+    "type": "lyric",
+    "text": "My beloved is the most beautiful"
+   },
+   {
+    "type": "chord",
+    "text": "F             C"
+   },
+   {
+    "type": "lyric",
+    "text": "Among thousands and thousands (x3)"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge]"
+   },
+   {
+    "type": "chord",
+    "text": "A#"
+   },
+   {
+    "type": "lyric",
+    "text": "For yours is the kingdom"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "Yours is the power"
+   },
+   {
+    "type": "chord",
+    "text": "Dm                 Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yours in the glory forever Amen"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge]"
+   },
+   {
+    "type": "chord",
+    "text": "A#"
+   },
+   {
+    "type": "lyric",
+    "text": "For yours is the kingdom"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "Yours is the power"
+   },
+   {
+    "type": "chord",
+    "text": "Dm                Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yours in the glory forever Amen"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   }
+  ]
+ },
+ {
+  "title": "Yeshua my beloved - Hindi (Mera Priya)",
+  "key": "D#m",
+  "keys": [
+   "D#m"
+  ],
+  "capo": 1,
+  "language": "Hindi",
+  "tags": [],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Intro]"
+   },
+   {
+    "type": "chord",
+    "text": "A# F C Dm"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse]"
+   },
+   {
+    "type": "chord",
+    "text": "Dm          A#"
+   },
+   {
+    "type": "lyric",
+    "text": "Mera priya sabse sundar"
+   },
+   {
+    "type": "chord",
+    "text": "F             C"
+   },
+   {
+    "type": "lyric",
+    "text": "Hazaaron mein hazaaron mein (x3)"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge]"
+   },
+   {
+    "type": "chord",
+    "text": "A#              C"
+   },
+   {
+    "type": "lyric",
+    "text": "Tera swarg aye, is prithvi par"
+   },
+   {
+    "type": "chord",
+    "text": "Dm"
+   },
+   {
+    "type": "lyric",
+    "text": "Rajya, Samarth, aur Mahima"
+   },
+   {
+    "type": "chord",
+    "text": "Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Teri hove sada Amen"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Bridge]"
+   },
+   {
+    "type": "chord",
+    "text": "A#"
+   },
+   {
+    "type": "lyric",
+    "text": "Vah raaj karta"
+   },
+   {
+    "type": "chord",
+    "text": "C"
+   },
+   {
+    "type": "lyric",
+    "text": "Prabhu raj karta"
+   },
+   {
+    "type": "chord",
+    "text": "Dm                Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Humesha uska raj rahe"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
+   },
+   {
+    "type": "chord",
+    "text": "A#                        C  Dm          Am"
+   },
+   {
+    "type": "lyric",
+    "text": "Yeshu hu oo oo ah, ha aa aa aa, ah aa aa aa"
    }
   ]
  },

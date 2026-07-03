@@ -337,6 +337,17 @@ setlistNextBtn.addEventListener('click', () => {
 
 renderList();
 
+// Logo is optional — if no logo.png has been uploaded to the repo root
+// yet, collapse the empty slot instead of showing a broken-image icon.
+// Upload a logo.png at any time (via GitHub's "Add file" on the repo
+// root) and it'll just start appearing, no code changes needed.
+(function initLogo(){
+  const img = document.getElementById('brandLogoImg');
+  const mark = document.getElementById('brandMark');
+  if(!img || !mark) return;
+  img.addEventListener('error', () => mark.classList.add('no-logo'));
+})();
+
 // Support a direct link to a specific song, e.g. index.html?open=Amazing%20Grace
 (function openFromQuery(){
   const params = new URLSearchParams(window.location.search);

@@ -96,6 +96,14 @@
   .lang-box input[type="range"]{ flex:1; accent-color:var(--pink); }
   .lang-box .lang-readout{ font-family:"SFMono-Regular",Menlo,monospace; min-width:0; flex:none; color:var(--lime); font-size:.72rem; }
 
+  .view-toggle-row{ gap:8px; }
+  .view-toggle-btn{
+    flex:1; padding:11px 10px; border:1px solid var(--rule); border-radius:var(--radius-sm);
+    background:var(--card); color:var(--text-dim); font-size:.85rem; font-weight:700; cursor:pointer;
+  }
+  .view-toggle-btn.active{ background:var(--lime); color:var(--bg); border-color:var(--lime); }
+  .view-toggle-btn:hover{ border-color:var(--violet); }
+
   /* ===== Song list ===== */
   main{ padding:14px 16px 40px; max-width:820px; margin:0 auto; }
   .empty-state{
@@ -127,6 +135,24 @@
   .badge-extra{
     font-size:.68rem; opacity:.8;
   }
+  .row-add-btn{
+    width:34px; height:34px; border-radius:50%; flex:none;
+    border:1px solid var(--rule); background:var(--card); color:var(--text-dim);
+    font-size:1.1rem; font-weight:800; cursor:pointer; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .row-add-btn:hover{ border-color:var(--violet); }
+  .row-add-btn.added{ background:var(--lime); color:var(--bg); border-color:var(--lime); }
+  .setlist-controls{ display:flex; gap:4px; flex:none; }
+  .row-icon-btn{
+    width:30px; height:30px; border-radius:8px; flex:none;
+    border:1px solid var(--rule); background:var(--card); color:var(--text-dim);
+    font-size:.9rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  }
+  .row-icon-btn:hover{ border-color:var(--violet); }
+  .row-icon-btn:disabled{ opacity:.3; cursor:default; }
+  .row-icon-btn.remove{ color:var(--pink); }
+  .row-icon-btn.remove:hover{ border-color:var(--pink); }
 
   /* ===== Song viewer ===== */
   #viewer{ display:none; padding-bottom:96px; }
@@ -141,6 +167,8 @@
     border-radius:999px; padding:10px 14px; font-size:.85rem; font-weight:700; cursor:pointer;
   }
   .btn:hover{ border-color:var(--violet); }
+  .btn:disabled{ opacity:.35; cursor:default; }
+  .btn:disabled:hover{ border-color:var(--rule); }
   .btn.icon{ padding:10px 12px; font-size:1rem; line-height:1; text-decoration:none; display:inline-flex; }
 
   .song-header{ padding:22px 20px 8px; max-width:760px; margin:0 auto; }
@@ -161,6 +189,11 @@
     background:var(--lime); color:var(--bg); border-color:var(--lime);
   }
   .key-pill-btn:hover{ border-color:var(--violet); }
+  .setlist-nav{
+    display:flex; align-items:center; gap:10px; margin-top:12px;
+  }
+  .setlist-nav #setlistPos{ font-size:.76rem; color:var(--text-dim); font-weight:600; }
+  #setlistToggleBtn.added{ background:var(--lime); color:var(--bg); border-color:var(--lime); }
   .song-body{
     max-width:760px; margin:0 auto; padding:10px 20px 20px;
   }
@@ -248,6 +281,10 @@
       <div class="row search-row">
         <input type="search" id="searchBox" placeholder="Search by title or lyric…" autocomplete="off">
       </div>
+      <div class="row view-toggle-row">
+        <button class="view-toggle-btn active" id="viewAllBtn">All songs</button>
+        <button class="view-toggle-btn" id="viewSetlistBtn">My Setlist <span id="setlistCount">(0)</span></button>
+      </div>
       <div class="row">
         <select id="keyFilter"></select>
         <select id="tagFilter"></select>
@@ -271,11 +308,17 @@
   <div class="viewer-bar">
     <button class="btn icon" id="backBtn">←</button>
     <div style="flex:1;"></div>
+    <button class="btn icon" id="setlistToggleBtn" title="Add to my setlist">+ Setlist</button>
   </div>
   <div class="song-header">
     <h2 id="songTitle"></h2>
     <div class="sub" id="songSub"></div>
     <div class="alt-keys" id="altKeys" style="display:none;"></div>
+    <div class="setlist-nav" id="setlistNav" style="display:none;">
+      <button class="btn icon" id="setlistPrevBtn">◀ Prev</button>
+      <span id="setlistPos"></span>
+      <button class="btn icon" id="setlistNextBtn">Next ▶</button>
+    </div>
   </div>
   <div class="song-body" id="songBody"></div>
 

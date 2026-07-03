@@ -22605,6 +22605,87 @@ const SONGS_DATA = [
   ]
  },
  {
+  "title": "Whose report will you believe",
+  "key": "Em",
+  "keys": [
+   "Em"
+  ],
+  "capo": 0,
+  "language": "English",
+  "tags": [
+   "Praise"
+  ],
+  "lines": [
+   {
+    "type": "chord",
+    "text": "Em                C"
+   },
+   {
+    "type": "lyric",
+    "text": "WHOSE REPORT WILL YOU BELIEVE"
+   },
+   {
+    "type": "chord",
+    "text": "Am                     B7          Em"
+   },
+   {
+    "type": "lyric",
+    "text": "WE SHALL BELIEVE THE REPORT OF THE LORD"
+   },
+   {
+    "type": "chord",
+    "text": "Em                C"
+   },
+   {
+    "type": "lyric",
+    "text": "WHOSE REPORT WILL YOU BELIEVE"
+   },
+   {
+    "type": "chord",
+    "text": "Am                     B7          Em"
+   },
+   {
+    "type": "lyric",
+    "text": "WE SHALL BELIEVE THE REPORT OF THE LORD"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "chord",
+    "text": "Am    D         G    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "HIS REPORT SAYS I AM HEALED"
+   },
+   {
+    "type": "chord",
+    "text": "Am    B7        Em   E"
+   },
+   {
+    "type": "lyric",
+    "text": "HIS REPORT SAYS I AM FILLED"
+   },
+   {
+    "type": "chord",
+    "text": "Am    D         G    Em"
+   },
+   {
+    "type": "lyric",
+    "text": "HIS REPORT SAYS I AM FREE"
+   },
+   {
+    "type": "chord",
+    "text": "Am              B7"
+   },
+   {
+    "type": "lyric",
+    "text": "HIS REPORT SAYS VICTORY"
+   }
+  ]
+ },
+ {
   "title": "Wonderful Merciful Savior",
   "key": "C",
   "capo": null,

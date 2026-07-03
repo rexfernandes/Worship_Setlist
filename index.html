@@ -64,8 +64,14 @@
     width:34px;height:34px;border-radius:10px; flex:none;
     background:var(--grad);
     display:flex;align-items:center;justify-content:center;
-    font-size:1.1rem;
+    overflow:hidden;
   }
+  .brand .mark img{
+    width:100%; height:100%; object-fit:contain; display:block;
+  }
+  /* Collapsed by JS (see app.js) if no logo.png has been uploaded yet —
+     avoids showing a broken-image icon before you add one. */
+  .brand .mark.no-logo{ display:none; }
   .brand h1{
     font-size:1.15rem; font-weight:800; letter-spacing:-.2px; margin:0;
     color:var(--text);
@@ -287,7 +293,9 @@
   <header class="topbar">
     <div class="brand">
       <div class="brand-left">
-        <div class="mark">🎤</div>
+        <div class="mark" id="brandMark">
+          <img src="logo.png" alt="Worship Leader Buddy logo" id="brandLogoImg">
+        </div>
         <div>
           <h1>Worship Songs</h1>
           <span class="count" id="songCount"></span>

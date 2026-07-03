@@ -19152,6 +19152,251 @@ const SONGS_DATA = [
   ]
  },
  {
+  "title": "Teri Stuti Mein Karu",
+  "key": "D",
+  "keys": [
+   "D"
+  ],
+  "capo": 0,
+  "language": "Hindi",
+  "tags": [
+   "Worship"
+  ],
+  "lines": [
+   {
+    "type": "lyric",
+    "text": "[Chorus]"
+   },
+   {
+    "type": "chord",
+    "text": "D"
+   },
+   {
+    "type": "lyric",
+    "text": "Teri Stuti Main Karu"
+   },
+   {
+    "type": "chord",
+    "text": "A"
+   },
+   {
+    "type": "lyric",
+    "text": "Aaradhna Karu"
+   },
+   {
+    "type": "chord",
+    "text": "G     A D"
+   },
+   {
+    "type": "lyric",
+    "text": "Dil Se Dil Se"
+   },
+   {
+    "type": "chord",
+    "text": "D"
+   },
+   {
+    "type": "lyric",
+    "text": "Teri Stuti Main Karu"
+   },
+   {
+    "type": "chord",
+    "text": "A"
+   },
+   {
+    "type": "lyric",
+    "text": "Aaradhna Karu"
+   },
+   {
+    "type": "chord",
+    "text": "G     A D"
+   },
+   {
+    "type": "lyric",
+    "text": "Dil Se Dil Se"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-Chorus 1]"
+   },
+   {
+    "type": "chord",
+    "text": "G                   Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Meri Saanson Mein Tera Naam Rahe"
+   },
+   {
+    "type": "chord",
+    "text": "G            Bm   A"
+   },
+   {
+    "type": "lyric",
+    "text": "Meri Saanson Mein Tera Naam Rahe"
+   },
+   {
+    "type": "chord",
+    "text": "D          G     A"
+   },
+   {
+    "type": "lyric",
+    "text": "Hai Prabhu Tu Hi Tu"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 1]"
+   },
+   {
+    "type": "chord",
+    "text": "D"
+   },
+   {
+    "type": "chord",
+    "text": "Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Jahaan Meri Nazar Jaye"
+   },
+   {
+    "type": "chord",
+    "text": "Em         A"
+   },
+   {
+    "type": "lyric",
+    "text": "Wahan Teri Stuti Ho"
+   },
+   {
+    "type": "chord",
+    "text": "D"
+   },
+   {
+    "type": "chord",
+    "text": "Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Jahaan Meri Nazar Jaye"
+   },
+   {
+    "type": "chord",
+    "text": "Em         A"
+   },
+   {
+    "type": "lyric",
+    "text": "Wahan Teri Stuti Ho"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-Chorus 2]"
+   },
+   {
+    "type": "chord",
+    "text": "G            Bm A"
+   },
+   {
+    "type": "lyric",
+    "text": "Saari Duniva Ka Rakhwala Tu"
+   },
+   {
+    "type": "chord",
+    "text": "G            Bm A"
+   },
+   {
+    "type": "lyric",
+    "text": "Saari Duniya Ka Rakhwala Tu"
+   },
+   {
+    "type": "chord",
+    "text": "D         G     A"
+   },
+   {
+    "type": "lyric",
+    "text": "Hai Yeshu Tu Hi Tu"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Verse 2]"
+   },
+   {
+    "type": "chord",
+    "text": "D              Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Khushi Aur Gam Mein Saath Ho Tera"
+   },
+   {
+    "type": "chord",
+    "text": "Em                     A"
+   },
+   {
+    "type": "lyric",
+    "text": "Prarambh Aur Anth Mein Naam Ho Tera"
+   },
+   {
+    "type": "chord",
+    "text": "D              Bm"
+   },
+   {
+    "type": "lyric",
+    "text": "Khushi Aur Gam Mein Saath Ho Tera"
+   },
+   {
+    "type": "chord",
+    "text": "Em                     A"
+   },
+   {
+    "type": "lyric",
+    "text": "Prarambh Aur Anth Mein Naam Ho Tera"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "lyric",
+    "text": "[Pre-Chorus 3]"
+   },
+   {
+    "type": "chord",
+    "text": "G           Bm A"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere Jeevan Ka Sahara Tu"
+   },
+   {
+    "type": "chord",
+    "text": "G              Bm A"
+   },
+   {
+    "type": "lyric",
+    "text": "Mere Jeevan Ka Sahaara Tu"
+   },
+   {
+    "type": "chord",
+    "text": "D   G      A"
+   },
+   {
+    "type": "lyric",
+    "text": "Hai Prabhu Tu Hi Tu"
+   }
+  ]
+ },
+ {
   "title": "Thank You For Saving Me",
   "key": "E",
   "capo": null,

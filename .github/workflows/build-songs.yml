@@ -3,9 +3,14 @@ name: Build song library and deploy
 # Runs on every push to main. Parses any pending new-songs/*.txt files,
 # commits the result, then deploys the site — all in one run, so it
 # doesn't depend on a second workflow being auto-triggered (GitHub blocks
-# the bot's own commits from triggering further workflow runs, so a
-# separate "deploy on push" workflow would silently never fire after the
-# bot pushes).
+# the bot's own commits from triggering further workflow runs).
+#
+# If two songs are uploaded close together, each triggers its own run, and
+# both may try to push an update to songs_data.js around the same time.
+# The commit step below retries: on a rejected push, it discards its own
+# commit, re-fetches the latest main (which now has the other run's song
+# already merged), and re-parses from that fresh state — so both songs
+# end up correctly merged instead of one push failing outright.
 on:
   push:
     branches: [main]
@@ -34,23 +39,49 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Parse and merge new songs
-        # continue-on-error so one broken song file (still visible with a
-        # warning in this step's log) never blocks the site from deploying
+      - name: Parse new songs and commit (retries on push conflicts)
+        # continue-on-error so a genuinely broken song file (still visible
+        # with a non-zero outcome on this step) never blocks the site from
+        # deploying — matches the previous behavior, just now race-safe too.
         continue-on-error: true
-        run: python3 scripts/build_songs.py
-
-      - name: Commit updated library
         run: |
           git config user.name "song-library-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add songs_data.js new-songs/
-          if git diff --cached --quiet; then
-            echo "Nothing to commit."
-          else
+
+          for attempt in 1 2 3 4 5; do
+            echo "--- attempt $attempt ---"
+
+            set +e
+            python3 scripts/build_songs.py
+            parse_exit=$?
+            set -e
+
+            git add songs_data.js new-songs/
+            if git diff --cached --quiet; then
+              echo "Nothing to commit."
+              break
+            fi
+
             git commit -m "Add/update songs from new-songs/"
-            git push
-          fi
+
+            if git push; then
+              echo "Pushed successfully on attempt $attempt."
+              break
+            fi
+
+            if [ "$attempt" -eq 5 ]; then
+              echo "Push still failing after 5 attempts — leaving for manual investigation."
+              exit 1
+            fi
+
+            echo "Push rejected (another run committed first). Resetting to latest and retrying..."
+            git reset --hard HEAD~1
+            git fetch origin main
+            git reset --hard origin/main
+            sleep $(( (RANDOM % 5) + 1 ))
+          done
+
+          exit "${parse_exit:-0}"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

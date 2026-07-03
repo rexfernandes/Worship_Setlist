@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Worship Song Library</title>
+<title>Worship Leader Buddy</title>
 <style>
   :root{
     --bg:#0f0b1a;
@@ -42,6 +42,19 @@
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--rule);
     padding:14px 16px 12px;
+  }
+  .brand-banner{
+    display:flex; align-items:baseline; justify-content:center; gap:7px;
+    padding:7px 16px;
+    background:var(--bg-elev);
+    border-bottom:1px solid var(--rule);
+  }
+  .brand-banner .brand-name{
+    font-size:.7rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .brand-banner .brand-by{
+    font-size:.64rem; font-weight:600; color:var(--text-dim); letter-spacing:.02em;
   }
   .brand{
     display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px;
@@ -267,6 +280,10 @@
 <body>
 
 <div id="listView">
+  <div class="brand-banner">
+    <span class="brand-name">Worship Leader Buddy</span>
+    <span class="brand-by">by Rex Fernandes</span>
+  </div>
   <header class="topbar">
     <div class="brand">
       <div class="brand-left">
